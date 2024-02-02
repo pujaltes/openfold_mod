@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.3.1-cudnn8-devel-ubuntu18.04
+FROM nvidia/cuda:12.1.0-cudnn8-devel-ubi8
 
 # metainformation
 LABEL org.opencontainers.image.version = "1.0.0"
@@ -11,7 +11,7 @@ RUN apt-key del 7fa2af80
 RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
 
-RUN apt-get update && apt-get install -y wget libxml2 cuda-minimal-build-11-3 libcusparse-dev-11-3 libcublas-dev-11-3 libcusolver-dev-11-3 git
+RUN apt-get update && apt-get install -y wget libxml2 cuda-minimal-build-12-1 libcusparse-dev-12-0 libcublas-dev-12-1 libcusolver-dev-11-4 git
 RUN wget -P /tmp \
     "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh" \
     && bash /tmp/Miniforge3-Linux-x86_64.sh -b -p /opt/conda \
