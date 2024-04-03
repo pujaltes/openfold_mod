@@ -26,6 +26,8 @@ dependencies:
   - ml-collections
   - aria2
   - git
+  - tensorboard
+  - ipykernel
   - bioconda::hmmer==3.3.2
   - bioconda::hhsuite==3.3.0
   - bioconda::kalign2==2.04
