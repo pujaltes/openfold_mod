@@ -44,7 +44,7 @@ from openfold.utils.tensor_utils import (
     flatten_final_dims,
 )
 
-attn_core_inplace_cuda = lambda None
+attn_core_inplace_cuda = lambda: None
 
 
 class AngleResnetBlock(nn.Module):
